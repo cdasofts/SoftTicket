@@ -1,0 +1,51 @@
+#imagen_promotor {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left: 6%;
+	cursor:pointer;
+	margin-top: 1.5%;
+}
+
+#lblpromotor {
+	float: left;
+	margin-left: 1%;
+	margin-top: 3%;
+	font-family: gotham;
+}
+
+#contedor_buscador {
+	width: 100%;
+
+
+}
+
+#contenedor_buscador {
+	width: 50%;
+		background-color: #BABBFF;
+	height: 15%;
+}
+
+#lblbuscador {
+	margin-left: 5%;
+	width: 10%;
+	margin-top: 15px;
+	font-family: gotham;
+}
+
+#imagen_maps {
+		width: 50px;
+	height: 50px;
+	cursor:pointer;
+}
+
+#mapas {
+	float: right;
+	margin-right: 10%;
+	margin-top: -6%;
+}
+
+#datepicker {
+	width: 15%;
+	z-index: 10000;
+}

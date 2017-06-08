@@ -1,0 +1,45 @@
+#contedor_encabezado {
+
+		width: 100%;
+	height: 20%;
+display: table;
+
+
+
+}
+
+#divlogo{
+	width: 25%;
+	height: 100%;
+display: table-cell;
+}
+
+
+
+#divbuscador{
+	width: 41%;
+	height: 100%;
+display: table-cell;
+}
+
+
+#diventrar{
+	width: 33%;
+	height: 100%;
+display: table-cell;
+
+}
+
+
+#btnEntrar {
+	margin-left: 10%;
+	font-family: coco;
+}
+
+#imgtraductor {
+	margin-left: 10%;
+}
+
+#imgayuda {
+	margin-left: 10%;
+}
