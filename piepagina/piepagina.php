@@ -1,7 +1,10 @@
 <head>
+<!-- Linkeo a archivo css -->
 <link rel="stylesheet" href="assets/style/pie.css" type="text/css">
 </head>
 
+
+<!-- Estructura del pie de pagina -->
 <div id="contenedor_pie">
 	
 <div id="linkeos_contenedor">
@@ -32,15 +35,15 @@
 
 </div>
 
-<table  style="width:50%;height:80%;">
+<table id="tblpie">
 	<tr>
-	<td style="padding-left:40px;font-size:22px;">
+	<td class="tdcolumna" >
 	Promociones
 </td>
 		<td>
 			
 			<?php 
-
+// se incluye la galeria de promociones
 		include "plugin/Promociones/autoPlaySlide/index.html";
 
 			?>
@@ -51,13 +54,13 @@
 
 	</tr>
 		<tr>
-				<td style="padding-left:40px;font-size:22px;">
+				<td class="tdcolumna">
 	Proximos
 </td>
 		<td>
 			
 						<?php 
-
+//se incluye la galeria de proximos eventos
 			include "plugin/proximos/autoPlaySlide/index.html";
 
 			?>
@@ -71,31 +74,23 @@
 
 </div>
 
-<!--DEMO01-->
-        <div id="animatedModal" style="display:none;">
-            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal10" style="color:white"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+<!-- Aqui se genera la estructura del modal de reembolso -->
+        <div id="animatedModal" class="modal">
+
+            <div  id="btn-close-modal" class="close-animatedModal10"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr"></span></center>
             </div>
                 
             <div class="modal-content">
-                <!--Your modal content goes here-->
             </div>
         </div>
 
-        <script>
-
-
-            $("#btnreembolso").animatedModal({
-                modalTarget:'animatedModal',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
 
 
 
-        </script>
 
+
+
+
+<!-- Linkeo a archivo .js -->
 <script src="assets/javascript/pie.js"></script>
