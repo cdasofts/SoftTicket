@@ -1,6 +1,8 @@
 <html>
 <head>
 
+<!-- Seccion donde se ponen todos los linkeos de archivos que se necesiten durante toda la aplicacion. -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -13,14 +15,13 @@
 
         <script src="plugin/LightBox/js/animatedModal.min.js"></script>
 
-
-<!--Font-awsome-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!--Google -Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 
 
+
+<!-- Se agregan las nuevas fuentes -->
 <style type="text/css">
 	
 	@font-face {
@@ -41,6 +42,8 @@
 </style>
     
 </head>
+
+<!-- Se incluyen todas las secciones en este archivo principal -->
 <body>
 <?php
 
