@@ -1,9 +1,10 @@
 
+<!-- Linkeo a archivo css -->
     
     <link rel="stylesheet" href="assets/style/categorias.css" type="text/css">
 
 
-
+<!-- Estructura del menu de Categorias -->
 <div class="container">
       
       <div class="xs-menu-cont">
@@ -11,27 +12,23 @@
         <nav class="xs-menu displaynone">
           <ul>
             <li class="active">
-              <a href="#">Home</a>
+              <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#">Conciertos</a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#">Academicos</a>
             </li>
             <li>
-              <a href="#">Team</a>
+              <a href="#">Culturales</a>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#">Deportes</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#">Familiares</a>
             </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-
           </ul>
         </nav>
       </div>
