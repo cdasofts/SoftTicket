@@ -4,14 +4,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-        <link rel="stylesheet" href="http://localhost:8080/softicket/plugin/LightBox/css/animate.min.css">
+        <link rel="stylesheet" href="softicket/plugin/LightBox/css/animate.min.css">
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-        <script src="http://localhost:8080/softicket/plugin/LightBox/js/animatedModal.min.js"></script>
+        <script src="softicket/plugin/LightBox/js/animatedModal.min.js"></script>
 
 
 <!--Font-awsome-->
@@ -25,17 +25,17 @@
 	
 	@font-face {
     font-family: gotham;
-    src: url(http://localhost:8080/softicket/assets/fonts/Gotham.otf);
+    src: url(softicket/assets/fonts/Gotham.otf);
 }
 
 @font-face {
     font-family: gotcha;
-    src: url(http://localhost:8080/softicket/assets/fonts/Gotcha.ttf);
+    src: url(softicket/assets/fonts/Gotcha.ttf);
 }
 
 @font-face {
     font-family: coco;
-    src: url(http://localhost:8080/softicket/assets/fonts/Coco.ttf);
+    src: url(softicket/assets/fonts/Coco.ttf);
 }
 
 </style>
