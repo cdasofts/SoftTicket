@@ -58,4 +58,26 @@
 	display:none;
 }
 
+.imagenesp {
+	cursor: pointer;
+}
+
+#btn-close-modal {
+	color:white;
+}
+
+#spanmodalp0 {
+	font-size:32px;cursor:pointer;margin:10px;
+}
+
+#spanmodalp1 {
+	font-size:32px;cursor:pointer;margin:10px;
+}
+#spanmodalp2 {
+	font-size:32px;cursor:pointer;margin:10px;
+}
+
+.modalp {
+	display:none;
+}
 

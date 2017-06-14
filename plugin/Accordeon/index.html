@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="plugin/Accordeon/accordeon.css" type="text/css">
+
+
+  <!-- se inicializa el accordeon-->
+
   <script>
   $( function() {
     $( "#accordion" ).accordion();
@@ -12,41 +17,9 @@
 
 </head>
 
-<style type="text/css">
-  
-  #accordion {
-    width:80%;
-    background-color: #5654FF;
-     text-align:left; 
-  }
-
-.secciones {
-  background-color:#EEEEFF;
-}
-
-.headsecc {
-background-color: #5654FF;
-height: 7%;
-text-align: left;
-color:white;
-font-family: gotcha;
-}
 
 
-.ui-accordion-header.ui-state-active { background-color: #0B11B2; }
-
-
-.lblEtiquetaL {
-  font-size: 16px;
-}
-
-.twitter-share-button {
-  margin-left: 90%;
-  margin-top:-15%;
-}
-
-</style>
-
+<!-- se genera la estructura del accordeon -->
 
 <body>
  
@@ -65,11 +38,11 @@ font-family: gotcha;
 <br>
 <label class="lblEtiquetaL">www.sitioweb.com</label>
 
-<center><iframe width="320" height="215"  style="margin-top:-18%;" 
+<center><iframe width="320" height="215" id="framey" 
 src="https://www.youtube.com/embed/XGSy3_Czz8k">
 </iframe></center>
 
-<center><label style="margin-top:5%;">Descripcion: </label>
+<center><label id="lbldescripcion">Descripcion: </label>
 <br>
 <label>TEXTO</label></center>
 <br>
@@ -77,7 +50,7 @@ src="https://www.youtube.com/embed/XGSy3_Czz8k">
   Comprar Boleto
 </button></center>
 
-<img src="multimedia/imagenes/promotor.png" style="height:30%;width:15%;margin-top:-35%;" align="right">
+<img src="multimedia/imagenes/promotor.png" id="imgpromocional" align="right">
 
 
 
@@ -85,7 +58,7 @@ src="https://www.youtube.com/embed/XGSy3_Czz8k">
 <br>
 <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" style="margin-top:-10%;" align="right">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<div align="right" style="margin-top:-10%">
+<div align="right" id="divasientosd">
 <label>
   Asientos Disponibles
 </label>
@@ -96,7 +69,7 @@ src="https://www.youtube.com/embed/XGSy3_Czz8k">
 </div>
 
 
-<div align="right" style="margin-top:5%">
+<div align="right" id="divasientos">
 <label >
   Disponibilidad
 </label>

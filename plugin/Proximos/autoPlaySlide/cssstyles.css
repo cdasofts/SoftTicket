@@ -58,4 +58,20 @@
 	display:none;
 }
 
+.imagenpro {
+	cursor:pointer;
 
+}
+
+#btn-close-modal {
+	color:white;
+}
+
+#spanmodalpro {
+	font-size:32px;cursor:pointer;margin:10px;
+}
+
+
+.modalpro {
+	display:none;
+}

@@ -2,17 +2,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- linkeo al archivo .css -->
 <link rel="stylesheet" type="text/css" href="plugin/Proximos/autoPlaySlide/cssstyles.css" />
 </head>
+
+<!-- Estructura de la galeria de proximos eventos -->
 <body>
 <center>
 <br /><br />
 
 <div id="container" >
 	<ul>
-      	<li><img src="plugin/Proximos/images/picture1.jpg" width="400" height="130" id="imagen4"  href="#animatedModal" style="cursor:pointer" /></li>
-            <li><img src="plugin/Proximos/images/picture2.jpg" width="400" height="130" id="imagen5"  href="#animatedModal02" style="cursor:pointer" /></li>
-            <li><img src="plugin/Proximos/images/picture3.jpg" width="400" height="130" id="imagen6"  href="#animatedModal03" style="cursor:pointer" /></li>
+      	<li><img src="plugin/Proximos/images/picture1.jpg" width="400" height="130" id="imagen4"  href="#animatedModal" class="imagenpro"/></li>
+            <li><img src="plugin/Proximos/images/picture2.jpg" width="400" height="130" id="imagen5"  href="#animatedModal02" class="imagenpro"/></li>
+            <li><img src="plugin/Proximos/images/picture3.jpg" width="400" height="130" id="imagen6"  href="#animatedModal03" class="imagenpro"/></li>
       </ul>
       <span class="button prevButton"></span>
       <span class="button nextButton"></span>
@@ -20,164 +24,39 @@
 </center>
 
 
-        <!--DEMO01-->
-        <div id="animatedModal" style="display:none">
-            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal" style="color:white"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+<!-- Estructura del modal de la imagen 1 -->
+        <div id="animatedModal" class="modalpro" >
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalpro" ></span></center>
             </div>
                 
             <div class="modal-content">
-                <!--Your modal content goes here-->
             </div>
         </div>
 
 
-       <!--DEMO01-->
-        <div id="animatedModal02" style="display:none">
-            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal" style="color:white"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+<!-- Estructura del modal de la imagen 2 -->
+        <div id="animatedModal02" class="modalpro">
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalpro"></span></center>
             </div>
                 
             <div class="modal-content">
-                <!--Your modal content goes here-->
             </div>
         </div>
 
-               <!--DEMO01-->
-        <div id="animatedModal03" style="display:none">
-            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal" style="color:white"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+<!-- Estructura del modal de la imagen 1 -->
+        <div id="animatedModal03" class="modalpro">
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalpro"></span></center>
             </div>
                 
             <div class="modal-content">
-                <!--Your modal content goes here-->
             </div>
         </div>
 
 
-
-
-        <script>
-
-
-            $("#imagen4").animatedModal({
-                modalTarget:'animatedModal',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
-
-               $("#imagen5").animatedModal({
-                modalTarget:'animatedModal02',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
-
-                              $("#imagen6").animatedModal({
-                modalTarget:'animatedModal03',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
-
-
-
-
-
-        </script>
-
-
-<script>
-$(window).load(function(){
-		var pages = $('#container li'), current=0;
-		var currentPage,nextPage;
-		var timeoutID;
-		var buttonClicked=0;
-
-		var handler1=function(){
-			buttonClicked=1;
-			$('#container .button').unbind('click');
-			currentPage= pages.eq(current);
-			if($(this).hasClass('prevButton'))
-			{
-				if (current <= 0)
-					current=pages.length-1;
-				else
-					current=current-1;
-				nextPage = pages.eq(current);	
-
-				nextPage.css("marginLeft",-604);
-				nextPage.show();
-				nextPage.animate({ marginLeft: 0 }, 800,function(){
-					currentPage.hide();
-				});
-				currentPage.animate({ marginLeft: 604 }, 800,function(){
-					$('#container .button').bind('click',handler1);
-				});
-			}
-			else
-			{
-
-				if (current >= pages.length-1)
-					current=0;
-				else
-					current=current+1;
-				nextPage = pages.eq(current);	
-
-				nextPage.css("marginLeft",604);
-				nextPage.show();
-				nextPage.animate({ marginLeft: 0 }, 800,function(){
-				});
-				currentPage.animate({ marginLeft: -604 }, 800,function(){
-					currentPage.hide();
-					$('#container .button').bind('click',handler1);
-				});
-			}		
-		}
-
-		var handler2=function(){
-			if (buttonClicked==0)
-			{
-			$('#container .button').unbind('click');
-			currentPage= pages.eq(current);
-			if (current >= pages.length-1)
-				current=0;
-			else
-				current=current+1;
-			nextPage = pages.eq(current);	
-			nextPage.css("marginLeft",604);
-			nextPage.show();
-			nextPage.animate({ marginLeft: 0 }, 800,function(){
-			});
-			currentPage.animate({ marginLeft: -604 }, 800,function(){
-				currentPage.hide();
-				$('#container .button').bind('click',handler1);
-			});
-			timeoutID=setTimeout(function(){
-				handler2();	
-			}, 4000);
-			}
-		}
-
-		$('#container .button').click(function(){
-			clearTimeout(timeoutID);
-			handler1();
-		});
-
-		timeoutID=setTimeout(function(){
-			handler2();	
-			}, 4000);
-		
-});
-
-</script>
+        <script src="plugin/Proximos/autoPlaySlide/dhtml.js"></script>
 
 
 

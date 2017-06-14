@@ -1,94 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    Demo by Ildar Sagdejev ( http://twitter.com/tknomad )
-  -->
   <meta charset="UTF-8">
+
+  <!-- Linkeo a archivo css -->
   <link rel="stylesheet" href="plugin/cloud9/css/common.css">
-  <style>
-
-    #showcase {
-      height: 460px;
-    }
-
-
-
-  </style>
 
 
 
 </head>
+
+<!-- Se genera la estructura de la Galeria-->
+
+
 <body>
  
   <div class="wrap">
     <div id="showcase" class="noselect">
-      <img class="cloud9-item" src="plugin/cloud9/images/browsers/1.png" alt="Firefox">
-      <img class="cloud9-item" src="plugin/cloud9/images/browsers/2.jpg" alt="Wyzo">
-      <img class="cloud9-item" src="plugin/cloud9/images/browsers/3.jpg" alt="Opera">
-      <img class="cloud9-item" src="plugin/cloud9/images/browsers/4.jpg" alt="Chrome">
+      <img class="cloud9-item" src="plugin/cloud9/images/Eventos/1.png" alt="Firefox">
+      <img class="cloud9-item" src="plugin/cloud9/images/Eventos/2.jpg" alt="Wyzo">
+      <img class="cloud9-item" src="plugin/cloud9/images/Eventos/3.jpg" alt="Opera">
+      <img class="cloud9-item" src="plugin/cloud9/images/Eventos/4.jpg" alt="Chrome">
     </div>
 
   </div>
+
+  <!-- Se mandan llamar los archivos .js que son necesarios-->
   <script src="plugin/cloud9/js/lib/jquery.reflection.js"></script>
   <script src="plugin/cloud9/js/lib/jquery.cloud9carousel.js"></script>
-  <script>
+  <script src="plugin/cloud9/js/dhtml.js"></script>
 
-  
-    $(function() {
-      var showcase = $("#showcase"), title = $('#item-title')
-
-      showcase.Cloud9Carousel( {
-        yOrigin: 42,
-        yRadius: 48,
-        mirror: {
-          gap: 12,
-          height: 0.2
-        },
-        buttonLeft: $("#nav > .left"),
-        buttonRight: $("#nav > .right"),
-        autoPlay: 1,
-        bringToFront: true,
-        onRendered: rendered,
-        onLoaded: function() {
-          showcase.css( 'visibility', 'visible' )
-          showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1500 )
-        }
-      } )
-
-      function rendered( carousel ) {
-        title.text( carousel.nearestItem().element.alt )
-
-        // Fade in based on proximity of the item
-        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
-        title.css('opacity', 0.5 + (0.5 * c))
-      }
-
-      //
-      // Simulate physical button click effect
-      //
-      $('#nav > button').click( function( e ) {
-        var b = $(e.target).addClass( 'down' )
-        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
-      } )
-
-      $(document).keydown( function( e ) {
-        //
-        // More codes: http://www.javascripter.net/faq/keycodes.htm
-        //
-        switch( e.keyCode ) {
-          /* left arrow */
-          case 37:
-            $('#nav > .left').click()
-            break
-
-          /* right arrow */
-          case 39:
-            $('#nav > .right').click()
-        }
-      } )
-    })
-  </script>
 </body>
 </html>
