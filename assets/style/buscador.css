@@ -48,3 +48,23 @@
 #datepicker {
 	width: 15%;
 }
+
+#lblbusca {
+	font-size:18px;margin-top:10px;font-family: gotcha;
+}
+
+.selecters {
+	cursor:pointer;
+}
+
+#lblpuntoventa {
+	margin-left:77%;margin-top:-5%;
+}
+
+#btn-close-modal {
+	color:white
+}
+
+#spanmodal {
+	font-size:32px;cursor:pointer;margin:10px;
+}

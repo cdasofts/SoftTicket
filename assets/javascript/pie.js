@@ -1,4 +1,14 @@
 
+            $("#btnreembolso").animatedModal({
+                modalTarget:'animatedModal',
+                animatedIn:'zoomIn',
+                animatedOut:'zoomOut',
+                color:'#3498db',
+                animationDuration:'2s'
+            });
+
+
+
 var loading = function(e) {
   e.preventDefault();
   e.stopPropagation();

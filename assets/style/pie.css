@@ -1,5 +1,22 @@
+#tblpie {
+	width:50%;height:80%;
+}
 
+.tdcolumna {
+	padding-left:40px;font-size:22px;
+}
 
+#btn-close-modal {
+	color:white
+}
+
+#spanmodalr {
+	font-size:32px;cursor:pointer;margin:10px;
+}
+
+.modal {
+	display: none;
+}
 
 #container {
 height: 200px;
