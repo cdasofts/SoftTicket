@@ -3,6 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="plugin/Promociones/autoPlaySlide/cssstyles.css" />
+
+
 </head>
 <body>
 <center>
@@ -10,15 +12,18 @@
 
 <div id="container2" >
 	<ul>
-      	<li><img src="plugin/Promociones/images/picture1.jpg" width="400" height="160" /></li>
-            <li><img src="plugin/Promociones/images/picture2.jpg" width="400" height="160" /></li>
-            <li><img src="plugin/Promociones/images/picture3.jpg" width="400" height="160" /></li>
+      	<li><img src="plugin/Promociones/images/picture1.jpg" width="400" height="130" id="imagen1"  href="#animatedModal" style="cursor:pointer" /></li>
+            <li><img src="plugin/Promociones/images/picture2.jpg" width="400" height="130" id="imagen2" href="#animatedModal02" style="cursor:pointer" /></li>
+            <li><img src="plugin/Promociones/images/picture3.jpg" width="400" height="130" id="imagen3" href="#animatedModal03" style="cursor:pointer" /></li>
       </ul>
       <span class="button2 prevbutton2"></span>
       <span class="button2 nextbutton2"></span>
 </div>
 </center>
 
+
+
+ 
 
 <script>
 $(window).load(function(){
@@ -104,5 +109,82 @@ $(window).load(function(){
 });
 
 </script>
+
+
+
+<!--DEMO01-->
+        <div id="animatedModal" style="display:none;">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal" style="color:white"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+
+
+        <!--DEMO01-->
+        <div id="animatedModal02" style="display:none;">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal02" style="color:white"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+
+
+        <!--DEMO01-->
+        <div id="animatedModal03" >
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal03" style="color:white"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+
+
+            $("#imagen1").animatedModal({
+                modalTarget:'animatedModal',
+                animatedIn:'zoomIn',
+                animatedOut:'zoomOut',
+                color:'#3498db',
+                animationDuration:'2s'
+            });
+
+                        $("#imagen2").animatedModal({
+                modalTarget:'animatedModal02',
+                animatedIn:'zoomIn',
+                animatedOut:'zoomOut',
+                color:'#3498db',
+                animationDuration:'2s'
+            });
+
+
+                        $("#imagen3").animatedModal({
+                modalTarget:'animatedModal03',
+                animatedIn:'zoomIn',
+                animatedOut:'zoomOut',
+                color:'#3498db',
+                animationDuration:'2s'
+            });
+
+        </script>
+
+
+
 </body>
 </html>

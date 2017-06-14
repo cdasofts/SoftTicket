@@ -1,38 +1,151 @@
- <head>
-  <link rel="stylesheet" href="plugin/Accordeon/estilo.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+
 
 </head>
 
+<style type="text/css">
+  
+  #accordion {
+    width:80%;
+    background-color: #5654FF;
+     text-align:left; 
+  }
 
-<div class="container">
-          <div class="accordion">
-            <dl>
-              <dt>
-                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Primer Evento</a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur <a href="https://www.google.com">Test</a>adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-              <dt>
-                <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
-                  Segundo Evento</a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-              <dt>
-                <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
-                  Tercer Evento
-                </a>
-              </dt>
-              <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. </p>
-                <p>Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.</p>
-              </dd>
-            </dl>
-          </div>
-        </div>
+.secciones {
+  background-color:#EEEEFF;
+}
 
-            <script src="plugin/Accordeon/dhtml.js"></script>
+.headsecc {
+background-color: #5654FF;
+height: 7%;
+text-align: left;
+color:white;
+font-family: gotcha;
+}
+
+
+.ui-accordion-header.ui-state-active { background-color: #0B11B2; }
+
+
+.lblEtiquetaL {
+  font-size: 16px;
+}
+
+.twitter-share-button {
+  margin-left: 90%;
+  margin-top:-15%;
+}
+
+</style>
+
+
+<body>
+ 
+<center><div id="accordion" >
+  <h3 class="headsecc">Primer Evento</h3>
+  <div class="secciones">
+<label class="lblEtiquetaL">Estacionamiento: </label>
+<br>
+<label class="lblEtiquetaL">SI</label>
+<br><br>
+<label class="lblEtiquetaL">Precio General: </label>
+<br>
+<label class="lblEtiquetaL">$600.00</label>
+<br><br>
+<label class="lblEtiquetaL">Sitio web del Recinto: </label>
+<br>
+<label class="lblEtiquetaL">www.sitioweb.com</label>
+
+<center><iframe width="320" height="215"  style="margin-top:-18%;" 
+src="https://www.youtube.com/embed/XGSy3_Czz8k">
+</iframe></center>
+
+<center><label style="margin-top:5%;">Descripcion: </label>
+<br>
+<label>TEXTO</label></center>
+<br>
+<center><button class="btn btn-success">
+  Comprar Boleto
+</button></center>
+
+<img src="multimedia/imagenes/promotor.png" style="height:30%;width:15%;margin-top:-35%;" align="right">
+
+
+
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=box_count&size=large&mobile_iframe=true&width=98&height=58&appId" width="98" height="58" style="border:none;margin-top:-20%;margin-right:2%;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" align="right"></iframe>
+<br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" style="margin-top:-10%;" align="right">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div align="right" style="margin-top:-10%">
+<label>
+  Asientos Disponibles
+</label>
+<br>
+<label>
+  30 VIP - 240 Generales - 30 Platinum
+</label>
+</div>
+
+
+<div align="right" style="margin-top:5%">
+<label >
+  Disponibilidad
+</label>
+<br>
+<label>
+  300 asientos
+</label>
+</div>
+
+  </div>
+  <h3 class="headsecc">Segundo Evento</h3>
+  <div class="secciones">
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3 class="headsecc">Tercer Evento</h3>
+  <div class="secciones">
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3 class="headsecc">Cuarto Evento</h3>
+  <div class="secciones">
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div></center>
+ 
+ 
+</body>
+</html>

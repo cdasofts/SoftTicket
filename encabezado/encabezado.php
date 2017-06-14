@@ -9,7 +9,7 @@
 
 <div id="divlogo" class="encabezado_divs">
 
-<div><center><img src="multimedia/imagenes/logo.png" style="width:50px;height:50px;cursor:pointer;"></center></div>	
+<div><center><img src="multimedia/imagenes/logo.png" style="width:60px;height:50px;cursor:pointer;"></center></div>	
 
 </div>
 

@@ -13,7 +13,7 @@
 	</div>
 
 
-	<button id="btnreembolso" data-label="Reembolso"     >
+	<button id="btnreembolso" data-label="Reembolso"  href="#animatedModal"    >
 	</button>
 
 <div id="linkeos">
@@ -34,6 +34,9 @@
 
 <table  style="width:50%;height:80%;">
 	<tr>
+	<td style="padding-left:40px;font-size:22px;">
+	Promociones
+</td>
 		<td>
 			
 			<?php 
@@ -43,8 +46,14 @@
 			?>
 
 		</td>
+
+
+
 	</tr>
 		<tr>
+				<td style="padding-left:40px;font-size:22px;">
+	Proximos
+</td>
 		<td>
 			
 						<?php 
@@ -54,11 +63,39 @@
 			?>
 
 		</td>
+
 	</tr>
 </table>
 
 
 
 </div>
+
+<!--DEMO01-->
+        <div id="animatedModal" style="display:none;">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal10" style="color:white"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" style="font-size:32px;cursor:pointer;margin:10px;"></span></center>
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+
+        <script>
+
+
+            $("#btnreembolso").animatedModal({
+                modalTarget:'animatedModal',
+                animatedIn:'zoomIn',
+                animatedOut:'zoomOut',
+                color:'#3498db',
+                animationDuration:'2s'
+            });
+
+
+
+        </script>
 
 <script src="assets/javascript/pie.js"></script>
