@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vista/plugin/Accordeon/accordeon.css" type="text/css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+
+
+
+
+  <!-- se inicializa el accordeon-->
+
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+
+
+</head>
+
+
+
+<!-- se genera la estructura del accordeon -->
+
+<body>
+ 
+<center><div id="accordion" >
+  <h3 class="headsecc">Primer Evento</h3>
+  <div class="secciones">
+<label class="lblEtiquetaL">Estacionamiento: </label>
+<br>
+<label class="lblEtiquetaL">SI</label>
+<br><br>
+<label class="lblEtiquetaL">Precio General: </label>
+<br>
+<label class="lblEtiquetaL">$600.00</label>
+<br><br>
+<label class="lblEtiquetaL">Sitio web del Recinto: </label>
+<br>
+<label class="lblEtiquetaL">www.sitioweb.com</label>
+
+<center><iframe width="320" height="215" id="framey" 
+src="https://www.youtube.com/embed/XGSy3_Czz8k">
+</iframe></center>
+
+<center><label id="lbldescripcion">Descripcion: </label>
+<br>
+<label>TEXTO</label></center>
+<br>
+<center><button id="btncomprar" class="btn btn-success" href="#animatedModal10">
+  Comprar Boleto
+</button></center>
+
+<img src="vista/multimedia/imagenes/promotor.png" id="imgpromocional" align="right">
+
+<div id='contedor_buscador'> 
+<label id="lblpuntoventa">Puntos de Venta</label>
+<div id="mapas"><img src="vista/multimedia/imagenes/maps.png"  id="imagen_maps"  href="#animatedModal"/>
+
+</div>
+</div>
+
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=box_count&size=large&mobile_iframe=true&width=98&height=58&appId" width="98" height="58" style="border:none;margin-top:-20%;margin-right:2%;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" align="right"></iframe>
+<br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" style="margin-top:-10%;" align="right">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div align="right" id="divasientosd">
+<label>
+  Asientos Disponibles
+</label>
+<br>
+<label>
+  30 VIP - 240 Generales - 30 Platinum
+</label>
+</div>
+
+
+<div align="right" id="divasientos">
+<label >
+  Disponibilidad
+</label>
+<br>
+<label>
+  300 asientos
+</label>
+</div>
+
+  </div>
+  <h3 class="headsecc">Segundo Evento</h3>
+  <div class="secciones">
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3 class="headsecc">Tercer Evento</h3>
+  <div class="secciones">
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3 class="headsecc">Cuarto Evento</h3>
+  <div class="secciones">
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div></center>
+ 
+ 
+<!-- Estructura del modal del boton de comprar -->
+        <div id="animatedModal10" class="modal10">
+            <div  id="btn-close-modal10"> 
+
+
+
+
+
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal10"  onclick="cancelar();"></span></center>
+            </div>
+                
+            <div class="modal-content10">
+             
+             <center><img src="vista/multimedia/imagenes/seleccionadorlugar.gif" id="imgselected">
+             </center>
+
+
+<center>
+  <div id="captcha">
+    <img src="vista/multimedia/imagenes/captcha.gif">
+  </div>
+</center>
+
+
+  <div id="pago_boleto"  style="display:none;">
+
+<table id="tblpago" >
+  <tr >
+    <td class="tdpago"><label>Metodo de Pago: </label></td>
+    <td class="tdpago">
+      
+      <img src="vista/multimedia/imagenes/metodosdepago.png" id="imgmetodopago">
+
+    </td>
+  </tr>
+    <tr>
+      <td class="tdpago"><label>Nombre: </label>
+</td>
+      <td class="tdpago"><input type="text" class="form-control" id="txtNombreP">
+</td>
+    </tr>
+    <tr>
+      <td  class="tdpago"><label>Apellidos: </label>
+</td>
+      <td class="tdpago"><input type="text" class="form-control">
+</td>
+    </tr>
+        <tr>
+      <td class="tdpago"><label>Numero de Tarjeta: </label>
+</td>
+      <td class="tdpago"><input type="text" class="form-control" >
+</td>
+    </tr>
+        <tr>
+      <td class="tdpago">        <label>Fecha de Vencimiento: </label>
+</td>
+      <td class="tdpago"> 
+         <input type="text" class="form-control" id="datevencimiento">
+         <label id="lblseparacion">/</label>
+          <input type="text" class="form-control" id="datevencimiento">
+</td>
+    </tr>
+        <tr>
+      <td class="tdpago">            <label>Correo Electronico: </label>
+</td>
+      <td class="tdpago">    <input type="text" class="form-control">
+</td>
+    </tr>
+            <tr>
+      <td class="tdpago">            <label>Porque Medio Conociste el Evento: </label>
+</td>
+      <td class="tdpago">
+
+<select class="selectpicker"  multiple data-max-options="3">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Barbecue</option>
+    <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Barbecue</option>
+    <option>Barbecue</option>
+    <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Barbecue</option>
+</select>
+
+</td>
+    </tr>
+</table>
+
+
+  </div>
+
+
+
+<div id="divconfirmacion" style="display:none;float:right;margin-top:-30%;margin-right:10%;" align="right">
+
+<label style="float:right;" >Confirmar la compra</label>
+
+<span style="float:right;width:20%;height:45%;margin-top:5%;margin-right:-15%;border-width: 20px;
+    border-color: red;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula felis leo, et posuere dolor vulputate ac. Sed vestibulum lectus vel tempus bibendum. Proin et magna tempor, condimentum elit in, consectetur mi. Morbi eu massa viverra, euismod augue ac, consectetur risus. Praesent eget facilisis nunc. Aenean ut ornare magna. Nullam venenatis vulputate nisl, eu rutrum justo hendrerit eu.
+</span>
+  <button class="btn btn-success" id="btncomprarB" style="float:right;margin-top:28%;margin-right:-10%;" onclick="comprar();">
+    Comprar
+  </button>
+    <button class="btn btn-warning" style="float:right;margin-top:28%;margin-right:-20%;" onclick="cancelar();">
+    Cancelar
+  </button>
+</div>
+
+
+
+<center>
+<div id="buttonsrecinto">
+<button class="btn btn-success" id="btnnext" onclick="continuar1();">
+  Siguiente
+</button>
+</div>
+</center>
+
+
+<center>
+<div id="buttonscaptcha" style="display:none">
+<button class="btn btn-default" id="btnregresar" onclick="regresar2();">
+  Regresar
+</button>
+
+<button class="btn btn-success" id="btnnext" onclick="continuar2();">
+  Siguiente
+</button>
+</div>
+</center>
+
+
+<center>
+<div id="divpago" style="display:none">
+<button class="btn btn-default" id="btnregresar" onclick="regresar3();">
+  Regresar
+</button>
+
+<button class="btn btn-success" id="btnnext" onclick="continuar3();">
+  Siguiente
+</button>
+</div>
+</center>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+<!-- Estructura del Modal para google maps -->
+        <div id="animatedModal">
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal"></span></center>
+            </div>
+                
+            <div class="modal-content">
+            </div>
+        </div>
+
+        
+</body>
+</html>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+        <script src="vista/plugin/Accordeon/dhtml.js"></script>
+
+
+
