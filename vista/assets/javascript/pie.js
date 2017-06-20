@@ -1,6 +1,6 @@
 
             $("#btnreembolso").animatedModal({
-                modalTarget:'animatedModal',
+                modalTarget:'animatedModal01',
                 animatedIn:'zoomIn',
                 animatedOut:'zoomOut',
                 color:'#3498db',

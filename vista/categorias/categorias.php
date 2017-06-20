@@ -12,9 +12,6 @@
         <nav class="xs-menu displaynone">
           <ul>
             <li class="active">
-              <a href="#">Inicio</a>
-            </li>
-            <li>
               <a href="#">Conciertos</a>
             </li>
             <li>
@@ -35,22 +32,23 @@
       <nav class="menu">
         <ul>
           <li>
-            <a href="#">Inicio</a>
+            <a href="#"><i class="fa fa-music" style="margin-right:10px;"></i>Conciertos </a>
+
           </li>
           <li>
-            <a href="#">Conciertos</a>
+            <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true" style="margin-right:10px;"></i>Academicos</a>
           </li>
           <li>
-            <a href="#">Academicos</a>
+            <a href="#"><i class="fa fa-university" aria-hidden="true" style="margin-right:10px;"></i>Culturales
+</a>
           </li>
           <li>
-            <a href="#">Culturales</a>
+            <a href="#"><i class="fa fa-trophy" aria-hidden="true" style="margin-right:10px;"></i>Deportes
+</a>
           </li>
           <li>
-            <a href="#">Deportes</a>
-          </li>
-          <li>
-            <a href="#">Familiares</a>
+            <a href="#"><i class="fa fa-child" aria-hidden="true" style="margin-right:10px;"></i>Familiares 
+</a>
 
           </li>
 

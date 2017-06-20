@@ -38,7 +38,16 @@
                 <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal"></span></center>
             </div>
                 
-            <div class="modal-content">
+            <div class="modal-content" style="background-color:transparent;border-radius:0px;height:1000px;">
+           <center><label style="margin:2%;font-size:24px;">Vende tus Boletos</label></center>
+           
+               <?php 
+
+include 'vista/plugin/form/archivo.html';
+
+               ?>
+
+
             </div>
         </div>
 

@@ -16,22 +16,27 @@
 	</div>
 
 
-	<button id="btnreembolso"  href="#animatedModal" class="btn btn btn-default"   >
-	Reembolso
+	<button id="btnreembolso"  href="#animatedModal01" class="btn btn btn-default"   >
+	<i class="fa fa-repeat" aria-hidden="true" style="margin-right:5px;"></i>Reembolso
 	</button>
 
 <div id="linkeos">
-	<label class="lbllinkeos">Aviso de Privacidad</label>
+	<label class="lbllinkeos"><i class="fa fa-user-secret" aria-hidden="true" style="margin-right:20px;"></i><label>Aviso de Privacidad
+</label>
 	<br>
-	<label class="lbllinkeos">Preguntas Frecuentes</label>
+	<label class="lbllinkeos"><i class="fa fa-question-circle" aria-hidden="true" style="margin-right:20px;"></i>Preguntas Frecuentes</label>
 	<br>
-	<label class="lbllinkeos">Contactanos</label>
+	<label class="lbllinkeos"><i class="fa fa-envelope" aria-hidden="true" style="margin-right:20px;"></i>Contactanos</label>
 	<br>
-	<label class="lbllinkeos">Publicidad</label>
+	<label class="lbllinkeos"><i class="fa fa-newspaper-o" aria-hidden="true" style="margin-right:20px;"></i>Publicidad 
+</label>
 	<br>
-	<label class="lbllinkeos">Nuestras Politicas</label>
+	<label class="lbllinkeos"> <i class="fa fa-handshake-o" aria-hidden="true" style="margin-right:20px;"></i>Nuestras Politicas</label>
 	<br>
-	<label class="lbllinkeos">Terminos de Uso</label>
+	<label class="lbllinkeos"><i class="fa fa-exclamation-circle" aria-hidden="true" style="margin-right:20px;"></i>Terminos de Uso </label>
+	<br>
+		<label class="lbllinkeos"><i class="fa fa-phone" aria-hidden="true" style="margin-right:20px;"></i>Telfono: 4181040923 
+</label>
 	</div>
 
 </div>
@@ -76,13 +81,16 @@
 </div>
 
 <!-- Aqui se genera la estructura del modal de reembolso -->
-        <div id="animatedModal" class="modal">
+        <div id="animatedModal01">
 
-            <div  id="btn-close-modal" class="close-animatedModal10"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr"></span></center>
+            <div  id="btn-close-modal01" class="close-animatedModal01"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr01"></span></center>
             </div>
                 
-            <div class="modal-content">
+            <div class="modal-content01">
+           <?php
+include 'vista/plugin/form_reembolso/archivo.html';
+            ?>
             </div>
         </div>
 

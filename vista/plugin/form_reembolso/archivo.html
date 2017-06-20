@@ -1,0 +1,73 @@
+<link rel="stylesheet" type="text/css" href="vista/plugin/form_reembolso/archivo.css">
+
+
+
+
+
+<!-- multistep form -->
+<form id="msform">
+  <!-- fieldsets -->
+  <fieldset>
+
+
+
+    <h2 class="fs-title">Solicitud de Reembolso</h2>
+    <h3 class="fs-subtitle">Se debera de aprobar la solicitud para que usted pueda recibir el reembolso</h3>
+    <input type="text" name="nombre_r" placeholder="Ingrese su Nombre" style="width:60%;" />
+
+<label style="margin-left:5%;font-size:12px;">Imagen de credencial</label>
+    <div class="wrapper" align="right">
+  <div class="file-upload" style="margin-left:85%;margin-top:-10%;">
+    <input type="file" />
+    <i class="fa fa-arrow-up" style="font-size:30px;margin-top:0px"></i>
+  </div>
+</div>
+
+    <input type="number" name="precio_r" placeholder="Ingrese el precio de su boleto" style="width:60%;" />
+
+    <label style="margin-left:5%;font-size:12px;">Subir su Boleto</label>
+
+
+        <div class="wrapper" align="right">
+  <div class="file-upload" style="margin-left:85%;margin-top:-10%;">
+    <input type="file" />
+    <i class="fa fa-arrow-up" style="font-size:30px;margin-top:0px"></i>
+  </div>
+</div>
+
+<br>
+
+<select class="round" style="width:60%;">
+  <option>Seleccione el tipo de Pago</option>
+  <option>Tarjeta de Credito</option>
+  <option>Paypal</option>
+    <option>Tarjeta de Debito</option>
+
+</select>
+
+ <label style="margin-left:5%;font-size:12px;">Comprobante de Pago</label>
+    <div class="wrapper" align="right">
+  <div class="file-upload" style="margin-left:85%;margin-top:-6%;">
+    <input type="file" />
+    <i class="fa fa-arrow-up" style="font-size:30px;margin-top:0px"></i>
+  </div>
+</div>
+
+<br>
+
+    <input type="text" name="telefono_r" placeholder="Ingrese su numero de Telefono" style="width:60%;" />
+
+    <input type="text" name="email_r" placeholder="Ingrese su correo electronico" style="width:60%;" />
+
+<br><br>
+    
+    <center><input type="button" name="next" class="next action-button" value="Enviar" /></center>
+
+
+
+
+  </fieldset>
+</form>
+
+
+

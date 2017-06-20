@@ -7,6 +7,8 @@ require_once("db/conexion.php");
 <html>
 <head>
 
+
+
 <!-- Seccion donde se ponen todos los linkeos de archivos que se necesiten durante toda la aplicacion. -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
@@ -25,7 +27,7 @@ require_once("db/conexion.php");
                 <script src="vista/plugin/alerts/dist/sweetalert2.js"></script>
 
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 
@@ -84,3 +86,5 @@ include 'vista/derechos/derechos.php';
 
 </body>
 </html>
+
+

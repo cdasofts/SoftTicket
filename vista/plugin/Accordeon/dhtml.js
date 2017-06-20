@@ -8,6 +8,7 @@
 
  $( document ).ready(function() {
  	document.getElementById("btncomprarB").disabled = true;
+  
 $(".selectpicker").selectpicker();
 
     $(".bootstrap-select").click(function () {
@@ -45,6 +46,7 @@ $("#buttonscaptcha").show();
 $("#buttonsrecinto").hide();
 
 };
+
 
 
  function continuar2() {

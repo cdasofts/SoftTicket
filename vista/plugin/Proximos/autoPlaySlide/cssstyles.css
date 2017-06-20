@@ -18,7 +18,7 @@
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
-	z-index:2000;
+	z-index:500;
 	background-position:left top;
 	left:0
 }
@@ -33,7 +33,7 @@
 	top:50%;
 	margin-top:-36px;
 	cursor:pointer;
-	z-index:2000;
+	z-index:500;
 	background-position:right top;
 	right:0
 }
