@@ -20,7 +20,8 @@
 	cursor:pointer;
 	z-index:500;
 	background-position:left top;
-	left:0
+	left:0;
+		margin-left: -60px;
 }
 
 #container .prevButton:hover{ background-position:left bottom;left:0;}
@@ -35,7 +36,8 @@
 	cursor:pointer;
 	z-index:500;
 	background-position:right top;
-	right:0
+	right:0;
+		margin-right: -60px;
 }
 
 #container .nextButton:hover{background-position:right bottom;right:0;}

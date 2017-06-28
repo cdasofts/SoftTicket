@@ -1,5 +1,5 @@
 <head>
-<!-- Linkeo a archivo css -->
+<!-- Linkeo a archivo del css creado por nosotros -->
 <link rel="stylesheet" href="vista/assets/style/buscador.css" type="text/css">
 
 
@@ -60,7 +60,7 @@
         </div>
 
 
-<!-- Se llama a un archivo .js que que corresponde a esta seccion -->
+<!-- Se llama a un archivo .js creado por nosotros -->
 <script src="vista/assets/javascript/buscador.js"></script>
 
 

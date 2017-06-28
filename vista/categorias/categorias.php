@@ -1,5 +1,5 @@
 
-<!-- Linkeo a archivo css -->
+<!-- Linkeo a archivo css creado por nosotros -->
     
     <link rel="stylesheet" href="vista/assets/style/categorias.css" type="text/css">
 

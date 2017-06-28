@@ -1,13 +1,11 @@
+<!-- se linkea al archivo .css del plugin -->
 <link rel="stylesheet" type="text/css" href="vista/plugin/form/archivo.css">
 
 
-
-
-
 <!-- multistep form -->
-<form id="msform">
+<form id="msform" style="opacity:1.0">
   <!-- progressbar -->
-  <ul id="progressbar">
+  <ul id="progressbar" style="margin-left:30%;">
     <li class="active">Contacto</li>
     <li>Evento</li>
     <li>Banco</li>
@@ -26,16 +24,17 @@
 
 <br>
 
-<select class="round">
-  <option>Seleccione su estado</option>
-  <option>Guanajuato</option>
-  <option>Queretaro</option>
-    <option>Mexico</option>
+<select class="selectpicker" >
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
 </select>
 
 <br>
 
-  <input type="button" name="next" class="next action-button" value="Siguiente" />
+  <button type="button" name="next" class="next action-button" value="Siguiente">
+  Siguiente &nbsp <i class="fa fa-chevron-right"></i></button> 
+  
   
 
   </fieldset>
@@ -45,19 +44,21 @@
     <input type="text" name="evento" placeholder="Ingrese el nombre del evento" />
     <input type="text" name="lugar" placeholder="Ingrese el lugar o Foro" />
 
-<select class="round">
-  <option>Seleccionar el Estado</option>
-  <option>Guanajuato</option>
+<select class="selectpicker" >
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
 </select>
+
 
 <br><br>
 
-<select class="round">
-  <option>Seleccionar la ciudad</option>
-  <option>Dolores Hidalgo</option>
-  <option>San Miguel de Allende</option>
-    <option>San Luis de la Paz</option>
+<select class="selectpicker" >
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
 </select>
+
 
 <br><br>
 
@@ -72,9 +73,18 @@
     </textarea> 
 
 
+<button type="button" name="previous" class="previous action-button" value="Anterior">
+  
+<i class="fa fa-chevron-left"></i> &nbsp Anterior
 
-    <input type="button" name="previous" class="previous action-button" value="Anterior" />
-    <input type="button" name="next" class="next action-button" value="Siguiente" />
+</button>
+
+<button  type="button" name="next" class="next action-button" value="Siguiente">
+  
+Siguiente &nbsp<i class="fa fa-chevron-right"></i>
+
+</button>
+
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Informacion Bancaria</h2>
@@ -83,8 +93,21 @@
     <input type="text" name="clabe" placeholder="Ingrese la CLABE" />
     <input type="text" name="banco" placeholder="Ingrese el Banco" />
     <input type="text" name="numero_tarjeta" placeholder="Ingrese el numero de tarjeta" />
-    <input type="button" name="previous" class="previous action-button" value="Anterior" />
-    <input type="submit" name="submit" class="submit action-button" value="Enviar" />
+
+
+<button type="button" name="previous" class="previous action-button" value="Anterior">
+
+<i class="fa fa-chevron-left"></i> &nbsp Anterior
+  
+
+</button>
+
+<button type="submit" name="submit" class="submit action-button" value="Enviar">
+
+ <i class="fa fa-paper-plane"></i> &nbsp  Enviar 
+ 
+</button>
+  
   </fieldset>
 </form>
 

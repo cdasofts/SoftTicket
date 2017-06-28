@@ -1,5 +1,5 @@
 <head>
-<!-- Linkeo a archivo css -->
+<!-- Linkeo a archivo css creado por nosotros -->
 <link rel="stylesheet" href="vista/assets/style/pie.css" type="text/css">
 </head>
 
@@ -43,9 +43,6 @@
 
 <table id="tblpie">
 	<tr>
-	<td class="tdcolumna" >
-	Promociones
-</td>
 		<td>
 			
 			<?php 
@@ -60,9 +57,6 @@
 
 	</tr>
 		<tr>
-				<td class="tdcolumna">
-	Proximos
-</td>
 		<td>
 			
 						<?php 
@@ -83,8 +77,8 @@
 <!-- Aqui se genera la estructura del modal de reembolso -->
         <div id="animatedModal01">
 
-            <div  id="btn-close-modal01" class="close-animatedModal01"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr01"></span></center>
+            <div  id="btn-close-modal01" > 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr01" onclick="cancelar();"></span></center>
             </div>
                 
             <div class="modal-content01">
@@ -101,5 +95,5 @@ include 'vista/plugin/form_reembolso/archivo.html';
 
 
 
-<!-- Linkeo a archivo .js -->
+<!-- Linkeo a archivo .js creado por nosotros -->
 <script src="vista/assets/javascript/pie.js"></script>

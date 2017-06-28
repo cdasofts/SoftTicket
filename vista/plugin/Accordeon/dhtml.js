@@ -2,18 +2,20 @@
                 modalTarget:'animatedModal',
                 animatedIn:'zoomIn',
                 animatedOut:'zoomOut',
-                color:'#3498db',
+                color:'#E4D3FF',
                 animationDuration:'2s'
+              
             });
 
  $( document ).ready(function() {
+$('.selectpicker').selectpicker();
+
+
+
+
+
  	document.getElementById("btncomprarB").disabled = true;
   
-$(".selectpicker").selectpicker();
-
-    $(".bootstrap-select").click(function () {
-         $(this).addClass("open");
-    });
 
 $('.selectpicker').on('changed.bs.select', function (e) {
 
@@ -29,6 +31,9 @@ document.getElementById("btncomprarB").disabled = false;
 
 
 });
+
+
+
 
 
  $("#btncomprar").animatedModal({
@@ -53,13 +58,11 @@ $("#buttonsrecinto").hide();
  	$("#captcha").hide();
  	$("#pago_boleto").show();
  	$("#buttonscaptcha").hide();
- 	$("#divpago").show();
 };
 
 
  function continuar3() {
  	$("#divconfirmacion").show();
- 	$("#divpago").hide();
 };
 
 
@@ -80,6 +83,7 @@ $("#buttonsrecinto").show();
 
 
 function comprar() {
+
 
 swal({
   title: '¿Esta seguro de hacer la compra?',
@@ -110,8 +114,8 @@ function cancelar() {
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
-  confirmButtonText: 'Si',
-  cancelButtonText: 'No'
+  confirmButtonText: ' <i class="fa fa-check" aria-hidden="true" style="margin-right:5px;" ></i>Si',
+  cancelButtonText: '<i class="fa fa-times" aria-hidden="true" style="margin-right:5px;"></i> No'
 }).then(function () {
 
 	 location.reload();
@@ -124,5 +128,57 @@ function cancelar() {
 
 
 
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 12
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
 
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Esta es tu ubicacion');
+            map.setCenter(pos);
+
+
+            var icon = {
+    url: "vista/plugin/Accordeon/prueba2.png", // url
+    scaledSize: new google.maps.Size(30, 30), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'marker with infoWindow',
+                icon: icon
+           });
+           marker.addListener('click', function() {
+               infowindow.open(map, marker);
+          });
+
+
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }

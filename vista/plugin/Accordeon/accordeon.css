@@ -27,7 +27,7 @@ font-family: gotcha;
 
 .twitter-share-button {
   margin-left: 90%;
-  margin-top:-15%;
+  margin-top:-20%;
 }
 
 #framey {
@@ -40,17 +40,16 @@ font-family: gotcha;
 }
 
 #imgpromocional {
-  height:30%;width:15%;margin-top:-35%;
+  height:30%;width:15%;
+  margin-top:-35%;
+  border-radius: 20px;
 }
 
-#divasientos {
-  margin-top:5%;
-  font-family: gotham;
-}
+
 
 #divasientosd {
   font-size: 15px;
-  margin-top:-10%;
+  margin-top:-25%;
   font-family: gotham;
 }
 
@@ -61,14 +60,16 @@ font-family: gotcha;
 }
 
 #lblpuntoventa {
-  margin-left:0%;margin-top:-9%;
+  margin-left:0%;
+  margin-top:0%;
   font-family: gotham;
+  margin-right: -8%;
 }
 
 #mapas {
   float: right;
-  margin-right: 92%;
-  margin-top: -6%;
+  margin-right: 3%;
+  margin-top: 4%;
 }
 
 #imagen_maps {
@@ -152,62 +153,40 @@ font-family: gotcha;
 
 
 
-select {
 
-  /* styling */
-  background-color: white;
-  border-radius: 4px;
-  display: inline-block;
-  font: inherit;
-  line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
 
-  /* reset */
 
-  margin: 0;      
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+
+
+
+
+.controls {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 29px;
+  margin-left: 17px;
+  margin-top: 10px;
+  outline: none;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
 }
 
-
-
-
-
-
-select.round {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    radial-gradient(#ddd 70%, transparent 72%);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    calc(100% - .5em) .5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1.5em 1.5em;
-  background-repeat: no-repeat;
+.controls:focus {
+  border-color: #4d90fe;
 }
-
-select.round:focus {
-  background-image:
-    linear-gradient(45deg, white 50%, transparent 50%),
-    linear-gradient(135deg, transparent 50%, white 50%),
-    radial-gradient(gray 70%, transparent 72%);
-  background-position:
-    calc(100% - 15px) 1em,
-    calc(100% - 20px) 1em,
-    calc(100% - .5em) .5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1.5em 1.5em;
-  background-repeat: no-repeat;
-  outline: 0;
+.title {
+  font-weight: bold;
 }
-
-
+#infowindow-content {
+  display: none;
+}
+#map #infowindow-content {
+  display: inline;
+}

@@ -1,5 +1,5 @@
 <head>
-<!-- Linkeo a archivo css -->
+<!-- Linkeo a archivo css creado por nosotros -->
 <link rel="stylesheet" href="vista/assets/style/encabezado.css" type="text/css">
 </head>
 
@@ -33,22 +33,24 @@
 
 
 <!-- Estructura para el modal de se un promotor -->
-        <div id="animatedModal02">
-            <div  id="btn-close-modal" class="close-animatedModal02"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal"></span></center>
+        <center><div id="animatedModal02"  style="overflow:hidden;">
+            <div  id="btn-close-modal" style="background-color:black;"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal" onclick="cancelar();" ></span></center>
             </div>
                 
-            <div class="modal-content" style="background-color:transparent;border-radius:0px;height:1000px;">
+            <div class="modal-content" style="background-color:grey;border-radius:0px;height:1000px;overflow:hidden">
            <center><label style="margin:2%;font-size:24px;">Vende tus Boletos</label></center>
            
+           <div>
                <?php 
-
+//se incluye el formulario para ser un promotor
 include 'vista/plugin/form/archivo.html';
 
                ?>
-
+</div>
 
             </div>
-        </div>
+        </div></center>
 
+<!-- se linkea el archivo .js creado por nosotros -->
         <script type="text/javascript" src="vista/assets/javascript/encabezado.js"></script>

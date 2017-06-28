@@ -1,5 +1,5 @@
 <head>
-<!-- Linkeo a archivo css -->
+<!-- Linkeo a archivo css creado por nosotros -->
 	<link rel="stylesheet" href="vista/assets/style/derechos.css" type="text/css">
 </head>
 

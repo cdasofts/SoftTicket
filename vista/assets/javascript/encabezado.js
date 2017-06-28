@@ -5,6 +5,6 @@
                 modalTarget:'animatedModal02',
                 animatedIn:'zoomIn',
                 animatedOut:'zoomOut',
-                color:'#3498db',
+                color:'#E4D3FF',
                 animationDuration:'2s'
             });
