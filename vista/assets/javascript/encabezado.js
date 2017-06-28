@@ -1,5 +1,6 @@
 
 
+
                         $("#imagen_promotor").animatedModal({
                 modalTarget:'animatedModal02',
                 animatedIn:'zoomIn',

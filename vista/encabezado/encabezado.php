@@ -20,7 +20,7 @@
 
 <div id="diventrar" class="encabezado_divs">
 	
-	<a id="btnEntrar" class="btn btn-success">Entrar</a>
+	<a id="btnEntrar" class="btn btn-success" href="login/index.php">Entrar</a>
 	<img id="imgtraductor" src="vista/multimedia/imagenes/traductor.png" >
 <img id="imgayuda" src="vista/multimedia/imagenes/ayuda.png" >
 </div>

@@ -6,12 +6,12 @@ require_once("db/conexion.php");
 
 <html>
 <head>
-
-
+<title>SoftTicket</title>
 
 <!-- Seccion donde se ponen todos los linkeos de archivos que se necesiten durante toda la aplicacion. -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
         <link rel="stylesheet" href="vista/plugin/LightBox/css/animate.min.css">
@@ -59,12 +59,8 @@ require_once("db/conexion.php");
 <body>
 <?php
 
-include 'vista/encabezado/encabezado.php';
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
+//include 'vista/encabezado/encabezado.php';
+include 'login/index.php';
 echo "<br>";
 echo "<br>";
 echo "<br>";

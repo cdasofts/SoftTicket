@@ -1,15 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+/*
+ * conexión a base de datos
+ */
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=softwareticket", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
+//asignar variable 
+$conn= mysqli_connect('localhost', 'root','','softwareticket') or die ('no se pudo conectar a la base de datos'. 
+        mysqli_error($conn));       
 ?>
-

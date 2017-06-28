@@ -1,0 +1,78 @@
+body{
+    background:url('http://k46.kn3.net/taringa/D/2/5/C/9/F/luismi222222/04C.jpg');
+    padding:50px;
+}
+
+#contenedorEncabezado{
+    position: fixed; 
+    z-index: 1000;
+    width: 100%;
+    border-radius: 0px;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:2px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc;
+}
+.btn-tw{
+    color: #fff;
+    background-color:#c32f10;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#DE2F10;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+#buscador{
+    margin-left: 60%;
+    width: 400px;
+}
+
+
+.btn-default{
+    margin-left: 200px;
+    background-color: #A69D98;
+
+}
+
+.btn-default:hover{
+    background-color:#736E6C;
+    }
