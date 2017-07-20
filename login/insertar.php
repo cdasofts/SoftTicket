@@ -1,6 +1,8 @@
 <?php
+echo "entro";
 //estructura de control para conprobar que se han mandado los datos 
 if(isset($_POST['usuario']) and isset($_POST['password'])){
+    echo "entro";
     include '../db/conexion.php';
     $nombre_u = mysqli_real_escape_string($conn,$_POST['nombre']);
     $app_usu = mysqli_real_escape_string($conn,$_POST['apellidos']);

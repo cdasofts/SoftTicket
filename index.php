@@ -26,7 +26,12 @@ require_once("db/conexion.php");
 
 </style>
 
+
+
 <head>
+
+
+
 <title>SoftTicket</title>
 
 
@@ -35,7 +40,14 @@ require_once("db/conexion.php");
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>
+
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
@@ -58,6 +70,8 @@ require_once("db/conexion.php");
     <link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 
         <link href='vista/assets/style/index.css' rel='stylesheet' type='text/css'>
+
+
     
 </head>
 
@@ -103,13 +117,33 @@ include 'vista/derechos/derechos.php';
 
 <!-- Codigo que inicia el accordeon de la pagina principal -->
   <script>
+
+
   $( function() {
     $( "#accordion" ).accordion();
   } );
 
   </script>
 
+<script type="text/javascript">
+  
+$(window).on('beforeunload', function() {
+   
+   window.setTimeout(function() {
+    $(window).scrollTop(0); 
+}, 0);
+
+});
+
+</script>
+
+
+
+
+
 </body>
 </html>
+
+
 
 

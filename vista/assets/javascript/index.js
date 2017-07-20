@@ -1,3 +1,5 @@
+//Aqui se genera el loader de forma correcta.
+
 $(document).ready(function() {
   var counter = 0;
 $("#contenedor_general").show();
@@ -58,5 +60,7 @@ setTimeout(function(){ $( ".loader" ).css( "z-index","-2000" ); }, 1000);
       num=num+2;
     },i*120);
   };
+
+$('body .dropdown-toggle').dropdown(); 
 
 }

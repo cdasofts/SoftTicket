@@ -1,11 +1,27 @@
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "formulario de promotor" );
+    var correcto=0;
+});
+
+
+
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
-	if(animating) return false;
+
+
+
 	animating = true;
+
+if (correcto==1) {
+return false;
+}
+
 	
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
@@ -37,6 +53,7 @@ $(".next").click(function(){
 		easing: 'easeInOutBack'
 	});
 });
+
 
 $(".previous").click(function(){
 	if(animating) return false;
@@ -74,9 +91,94 @@ $(".previous").click(function(){
 });
 
 $(".submit").click(function(){
-	return false;
+
+	if (correcto==1) {
+		alert("No Enviado");
+return false;
+}else {
+	alert("Enviado");
+}
+
 })
 
 
 
+function mensajeValidacion(idObjeto,idError,clave,mensaje) {
 
+	$("#"+idObjeto).css("border","3px solid red");
+	$("#"+idObjeto).addClass("error_form");
+	$("#"+idError).text(mensaje);
+	$("#"+idError).css("visibility","visible");
+
+
+}
+
+
+function siguiente_promo(id) {
+
+switch(id) {
+case 0: var nombre=$("#txtnombre_promotor").val();
+  var apellidos=$("#txtapellidos_promotor").val();
+  var correo=$("#txtcorreo_promotor").val();
+  var estado_promotor=$( "#cmbEstado_promotor" ).val();
+var expresio_letras=/^[a-zA-Z]*$/;
+var expresion_correo=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+if (nombre=="" ) {
+	mensajeValidacion("txtnombre_promotor","iderror_form",0,"campo obligatorio");
+	correcto=1;
+}else if (nombre.search(expresio_letras)) {
+	mensajeValidacion("txtnombre_promotor","iderror_form",0,"No puede haber numeros");
+correcto=1;
+}else if(apellidos.search(expresio_letras)) {
+	mensajeValidacion("txtnombre_promotor","iderror_form2",1,"No puede haber numeros");
+correcto=1;
+}else if (apellidos=="" ) {
+	mensajeValidacion("txtapellidos_promotor","iderror_form2",1,"campo obligatorio");
+		correcto=1;
+}else if (correo=="" ) {
+	mensajeValidacion("txtcorreo_promotor","iderror_form3",2,"campo obligatorio");
+		correcto=1;
+}else if (correo.search(expresion_correo)) {
+	mensajeValidacion("txtcorreo_promotor","iderror_form3",2,"Error de Formato");
+		correcto=1;
+}else if (estado_promotor==0) {
+	mensajeValidacion("cmbEstado_promotor","iderror_form4",3,"campo obligatorio");
+		correcto=1;
+}else {
+	correcto=0;
+}
+break;
+
+case 1: var nombre_evento=$("#txtnombre_evento").val();
+  var foro=$("#txtforo").val();
+  var secciones=$("#txtsecciones").val();
+    var boleto=$("#txtboleto").val();
+      var evento_promotor=$( "#cmbEvento_promotor" ).val();
+       var ciudad_promotor=$( "#cmbCiudad_promotor" ).val();
+
+if (nombre_evento=="" || foro=="" ||secciones=="" || boleto=="" || evento_promotor==0 || ciudad_promotor==0) {
+	correcto=1;
+}else {
+	correcto=0;
+}
+break;
+
+case 2: var asociado=$("#txtasociado").val();
+  var CLABE=$("#txtCLABE").val();
+  var banco=$("#txtbanco").val();
+    var tarjeta=$("#txttarjeta").val();
+
+if (asociado=="" || CLABE=="" || banco=="" || tarjeta=="") {
+	correcto=1;
+}else {
+	correcto=0;
+}
+break;
+
+
+}
+
+
+
+}

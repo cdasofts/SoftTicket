@@ -1,3 +1,9 @@
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
 $(window).load(function(){
 		var pages = $('#container2 li'), current=0;
 		var currentPage,nextPage;
@@ -80,28 +86,3 @@ $(window).load(function(){
 		
 });
 
-
- $("#imagen1").animatedModal({
-                modalTarget:'animatedModal',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
-
-                        $("#imagen2").animatedModal({
-                modalTarget:'animatedModal02',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
-
-
-                        $("#imagen3").animatedModal({
-                modalTarget:'animatedModal03',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });

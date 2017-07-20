@@ -14,14 +14,44 @@
 
 <!-- Se inicia el contador para realizar la compra -->
     <script>
+
+var val=0;
+
+
+
       $(function(){
   $("#btncomprar").click(function (e) {
-  $('.digits').countdown({
+    val=val+1;
+    if (val>1) {
+console.log("Ya dio clic mas de una vez");
+    }else {
+        $('.digits').countdown({
     format: 'mm:ss',
-    startTime: "05:59",
-    image: "vista/plugin/Accordeon/timer/img/digits.png"
-  });
+    startTime: "00:10",
+    image: "vista/plugin/Accordeon/timer/img/digits.png",
+    timerEnd: function() { 
+     swal({
+  title: 'El tiempo de compra se ha terminado',
+  text: 'La ventana se cerrara en 3 segundos',
+  timer: 3000,
+  showConfirmButton: false
+}).then(
+  function () {},
+  // handling the promise rejection
+  function (dismiss) {
+    if (dismiss === 'timer') {
+      $("#animatedModal10").removeClass("zoomIn");
+$("#animatedModal10").addClass("zoomOut");
+setTimeout(function(){ $("#animatedModal10").css("z-index","-3000"); }, 1000);
+      
+    }
+  }
+)
 
+
+       }
+  });
+    }
 
   });
       });
@@ -38,44 +68,36 @@
 <center><div id="accordion" >
   <h3 class="headsecc">20/06/2017 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shakira  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Queretaro</h3>
   <div class="secciones">
-<label class="lblEtiquetaL">Estacionamiento: </label>
+
+  <table   class="table-condensed" style="height:80%;width:100%;border-collapse: collapse;padding:0px;">
+  
+  <tr>
+    <td class="columnas" >
+      <label class="lblEtiquetaL">Estacionamiento: </label>
 <br>
 <label class="lblEtiquetaL">SI</label>
 <br><br>
 <label class="lblEtiquetaL">Precio General: </label>
 <br>
 <label class="lblEtiquetaL">$600.00</label>
-<br><br>
+    </td>
+    <td class="columnas">
+    <center><iframe width="350" height="215" id="framey" 
+src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
+</iframe></center>
+    </td>
+    <td class="columnas">
+      <center><img src="vista/multimedia/imagenes/perfil.jpg" id="imgpromocional" ></center>
+    </td>
+  </tr>
+  <tr>
+    <td class="columnas">
+            <br>
 <label class="lblEtiquetaL">Sitio web del Recinto: </label>
 <br>
 <label class="lblEtiquetaL">www.sitioweb.com</label>
-
-<center><iframe width="450" height="215" id="framey" 
-src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
-</iframe></center>
-
-<center><label id="lbldescripcion">Descripcion: </label>
-<br>
-<label>TEXTO</label></center>
-<br>
-<center><button id="btncomprar" class="btn btn-success"  href="#animatedModal10">
- <i class="fa fa-ticket" aria-hidden="true" style="margin-right:5px;" ></i> Comprar Boleto
-</button></center>
-
-<img src="vista/multimedia/imagenes/perfil.jpg" id="imgpromocional" align="right">
-
-<div  align="right" id='contedor_buscador'> 
-<label id="lblpuntoventa">Puntos de Venta</label>
-<div id="mapas"><img src="vista/multimedia/imagenes/maps.png"   id="imagen_maps"  href="#animatedModal"/>
-
-</div>
-</div>
-
-<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=box_count&size=large&mobile_iframe=true&width=98&height=58&appId" width="98" height="58" style="border:none;margin-top:-22%;margin-right:-6%;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" align="right"></iframe>
-<br>
-<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" style="margin-top:-10%;" align="right">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-<div align="left" id="divasientosd">
+<br><br>
+<div  id="divasientosd">
 <label>
   Asientos Disponibles
 </label>
@@ -89,12 +111,61 @@ src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
 </label>
 </div>
 
-
+    </td>
+    <td class="columnas">
+      <center><label id="lbldescripcion">Descripcion: </label>
+<br><br>
+<label>Producciones George Nader</label>
+<label> Direccion: George A. Nader</label>
+<label>Edicion: Mayret Velasquez</label>
+<label>Relaciones Publicas: Ezequiel Acosta (El Triple A)</label>
+<label>Sitio web del Artista: </label>&nbsp;&nbsp;<a>www.sitio.com</a>
+</center>
 <br>
+    </td>
+    <td class="columnas">
+     
+     <center> <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=box_count&size=large&mobile_iframe=true&width=98&height=58&appId" width="98" height="58" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" ></iframe>
+<br><br>
+</center>
+
+<center>
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-size="large">Twittear</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</center>
+
+    </td>
+  </tr>
+  <tr>
+    <td class="columnas">
+      <br>
 
 <label>Fecha: 20 de Junio del 2017</label>
 <br><br>
 <label>Hora: 20:00 (Hora Cd. Mexico)</label>
+<br><br>
+<a style="cursor:pointer;text-decoration:none;color:blue;">Ver todos los eventos de shakira.</a>
+    </td>
+    <td class="columnas">
+      <center><button id="btncomprar" class="btn btn-success"  href="#animatedModal10" onclick="indexon(10);">
+ <i class="fa fa-ticket" aria-hidden="true" style="margin-right:5px;" ></i> Comprar Boleto
+</button></center>
+    </td>
+    <td class="columnas">
+      <center>
+<div   id='contedor_buscador'> 
+<label id="lblpuntoventa">Puntos de Venta</label>
+<div id="mapas"><img src="vista/multimedia/imagenes/maps.png"   id="imagen_maps"  href="#animatedModal"  onclick="indexon(0);"/>
+
+</div>
+</div>
+</center>
+
+    </td>
+  </tr>
+
+  </table>
+
+
 
   </div>
 
@@ -140,16 +211,12 @@ src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
  
 <!-- Estructura del modal del boton de comprar -->
         <div id="animatedModal10" class="modal10">
-            <div  id="btn-close-modal10"> 
+            <div  id="btn-close-modal10" class="close-animatedModal"> 
 
-
-
-
-
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal10"  onclick="cancelar();"></span></center>
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal10" style="color:white;font-size:32px;cursor:pointer" onclick="cancelarC();"></span></center>
             </div>
                 
-            <div class="modal-content10">
+            <div class="modal-content10" style="background: rgba(0, 0, 0, 0.8);height:750px;">
              
 
 <!-- Estructura del timer para marcar el tiempo de compra -->
@@ -203,7 +270,7 @@ include 'vista/plugin/forms_pago/form_pago1/archivo.php';
   <button class="btn btn-success" id="btncomprarB" style="float:right;margin-top:64%;margin-right:-10%;" onclick="comprar();">
   <i class="fa fa-floppy-o" aria-hidden="true" style="margin-right:5px;"></i>  Comprar 
   </button>
-    <button class="btn btn-warning" style="float:right;margin-top:64%;margin-right:-20%;" onclick="cancelar();">
+    <button class="btn btn-warning" style="float:right;margin-top:64%;margin-right:-20%;" onclick="cancelarC();">
   <i  class="fa fa-ban" aria-hidden="true" style="margin-right:5px;"></i>  Cancelar
   </button>
 </div>
@@ -241,11 +308,11 @@ include 'vista/plugin/forms_pago/form_pago1/archivo.php';
 
 <!-- Estructura del Modal para google maps -->
         <div id="animatedModal">
-            <div  id="btn-close-modal" > 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal" onclick="cancelar();"></span></center>
+            <div  id="btn-close-modal"   class="close-animatedModal10" style="background: rgba(0, 0, 0, 0.8);"> 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal" style="color:white;font-size:32px;" onclick="cancelarPu();"></span></center>
             </div>
                 
-            <div class="modal-content" style="background-color:transparent;border-radius:0px;height:610px;">
+            <div class="modal-content" style="background: rgba(0, 0, 0, 0.8);border-radius:0px;height:auto;">
 
 
 
@@ -259,6 +326,16 @@ include 'vista/plugin/forms_pago/form_pago1/archivo.php';
 <!-- se incluye el script para que funcione google maps -->
     <script type="text/javascript" src="vista/plugin/google_maps/src/geo.js"></script>
 
+
+<center><div style="background-color:#A59AFF;margin-top:5%;width:80%;margin-bottom:5%;border-radius:20px;">
+
+<?php
+
+include 'vista/plugin/tabla/file2.html';
+
+ ?>
+
+</div></center>
 
 </div>
 

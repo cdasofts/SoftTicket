@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       
+
+
+
+<style>
+td
+{
+ font-family:Verdana, Geneva, sans-serif;
+}
+</style>
+</head>
+   
+<body>
+    
+    <br />
+                                
+   <div class="container">
+   <table id="example"></table>
+   </div>                             
+               
+         
+
+
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() 
+{
+ $('#example').dataTable( {
+          "language": {
+            "lengthMenu": "Muestra _MENU_ registros por pagina",
+            "zeroRecords": "No se encontro nada - Lo sentimos",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros disponibles",
+            "infoFiltered": "(filtracion de  _MAX_ registros totales)",
+            "search": "Buscar:",
+                "paginate": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+    }
+        },
+        "lengthMenu": [[5, 10, 15], [5, 10, 15]],
+        "aaData": [
+   ["Juan Martinez","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Maria Aguirre","Calle: Jesus Nazareno, Col: San Jose #12","7seven","4429871234"],
+   ["Dayana Barajas","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Juan Carlos","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Bety ayala","Calle: Jesus Nazareno, Col: San Jose #12","Liverpool","4429871234"],
+   ["Pedro Montez","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Hector Figueroa","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Alex Montiel","Calle: Jesus Nazareno, Col: San Jose #12","Farmacia","4429871234"],
+   ["Gabriel Soto","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Carolina Rodriguez","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"],
+   ["Paola Soez","Calle: Jesus Nazareno, Col: San Jose #12","Oxxo","4429871234"]
+   ],
+        "columns": [
+            { "title": "Encargado" },
+            { "title": "Direccion" },
+            { "title": "Comercio" },
+            { "title": "Contacto" }
+        ]
+    } );   
+});
+</script>
+        
+<script type="text/javascript">
+  $('#example')
+ .addClass('table table-striped table-bordered');
+
+
+</script>
+
+
+</body>
+</html>

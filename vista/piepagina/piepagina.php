@@ -16,7 +16,7 @@
 	</div>
 
 
-	<button id="btnreembolso"  href="#animatedModal01" class="btn btn btn-default"   >
+	<button id="btnreembolso"  href="#animatedModal5" class="btn btn btn-default"  onclick="indexonR()" >
 	<i class="fa fa-repeat" aria-hidden="true" style="margin-right:5px;"></i>Reembolso
 	</button>
 
@@ -75,13 +75,13 @@
 </div>
 
 <!-- Aqui se genera la estructura del modal de reembolso -->
-        <div id="animatedModal01">
+        <div id="animatedModal5">
 
-            <div  id="btn-close-modal01" > 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodalr01" onclick="cancelar();"></span></center>
+            <div  id="btn-close-modal5" style="background: rgba(0, 0, 0, 0.8);" > 
+                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal5" style="color:white;cursor:pointer;font-size:32px;" onclick="cancelarR()"></span></center>
             </div>
                 
-            <div class="modal-content01">
+            <div class="modal-content5" style="background: rgba(0, 0, 0, 0.8);height:750px;margin-top:-4%;padding:5%;">
            <?php
 include 'vista/plugin/form_reembolso/archivo.html';
             ?>

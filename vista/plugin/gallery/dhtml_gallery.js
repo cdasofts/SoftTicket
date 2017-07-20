@@ -1,3 +1,9 @@
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
         jQuery(document).ready(function ($) {
 
             var jssor_1_SlideshowTransitions = [

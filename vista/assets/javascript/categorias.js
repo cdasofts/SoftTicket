@@ -1,4 +1,5 @@
 
+//Aqui se genera la funcionalidad del menu de categorias.
 
 			$(document).ready(function() {
 

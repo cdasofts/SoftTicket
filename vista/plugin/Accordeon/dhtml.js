@@ -1,12 +1,15 @@
+//se manda llamar el modal de google maps para visualizarlo correctamente.
             $("#imagen_maps").animatedModal({
                 modalTarget:'animatedModal',
                 animatedIn:'zoomIn',
                 animatedOut:'zoomOut',
                 color:'#E4D3FF',
-                animationDuration:'2s'
-              
+                animationDuration:'2s'              
             });
 
+
+//Aqui se genera la accion de habilitar y desabilitar el boton de compra dependiendo de las opciones de 
+//el combobox de boostrap
  $( document ).ready(function() {
 $('.selectpicker').selectpicker();
 
@@ -28,6 +31,7 @@ document.getElementById("btncomprarB").disabled = false;
 });
 
 
+initMap();
 
 
 });
@@ -35,7 +39,7 @@ document.getElementById("btncomprarB").disabled = false;
 
 
 
-
+//Aqui se general el modal de comprar
  $("#btncomprar").animatedModal({
                 modalTarget:'animatedModal10',
                 animatedIn:'zoomIn',
@@ -44,6 +48,9 @@ document.getElementById("btncomprarB").disabled = false;
                 animationDuration:'2s'
             });
 
+
+
+//En esta seccion se hace el avance y retroceso del proceso de compra.
  function continuar1() {
  	$("#imgselected").hide();
 $("#captcha").show();
@@ -82,6 +89,43 @@ $("#buttonsrecinto").show();
 };
 
 
+
+
+
+
+//Aqui se genera una function que permite saber cual modal se debe cerra y de que forma.
+function indexon(id) {
+
+
+
+  $("#animatedModal").css("background-color","")
+$("#animatedModal"+id).css("background-color","")
+
+
+if (id==0) {
+if ($("#animatedModal").hasClass("zoomOut")==true) {
+
+   $("#animatedModal").removeClass("zoomOut");
+$("#animatedModal").addClass("zoomIn");
+
+
+}
+}else {
+  if ($("#animatedModal"+id).hasClass("zoomOut")==true) {
+
+   $("#animatedModal"+id).removeClass("zoomOut");
+$("#animatedModal"+id).addClass("zoomIn");
+
+
+}
+}
+
+
+
+}
+
+
+//Aqui se hace la funcion para saber si esta seguro de la compra
 function comprar() {
 
 
@@ -106,8 +150,11 @@ swal({
 }
 
 
-function cancelar() {
-	swal({
+function cancelarC() {
+
+  
+
+  swal({
   title: '¿Esta seguro de cancelar la compra?',
   text: "Si hace la cancelacion se perdera toda su informacion",
   type: 'warning',
@@ -118,9 +165,33 @@ function cancelar() {
   cancelButtonText: '<i class="fa fa-times" aria-hidden="true" style="margin-right:5px;"></i> No'
 }).then(function () {
 
-	 location.reload();
+$("#animatedModal10").removeClass("zoomIn");
+$("#animatedModal10").addClass("zoomOut");
+setTimeout(function(){ $("#animatedModal10").css("z-index","-3000"); }, 1000);
 
 })
+
+}
+
+function cancelarPu() {
+
+  swal({
+  title: '¿Esta seguro de cancelar  cerrar los puntos de venta?',
+  text: "Si hace la cancelacion se perdera toda su informacion",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: ' <i class="fa fa-check" aria-hidden="true" style="margin-right:5px;" ></i>Si',
+  cancelButtonText: '<i class="fa fa-times" aria-hidden="true" style="margin-right:5px;"></i> No'
+}).then(function () {
+
+$("#animatedModal").removeClass("zoomIn");
+$("#animatedModal").addClass("zoomOut");
+setTimeout(function(){ $("#animatedModal").css("z-index","-3000"); }, 1000);
+
+})
+
 
 }
 
@@ -128,6 +199,8 @@ function cancelar() {
 
 
 
+
+//Esta funcion inicia el google maps
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
@@ -150,7 +223,7 @@ function initMap() {
 
 
             var icon = {
-    url: "vista/plugin/Accordeon/prueba2.png", // url
+    url: "vista/multimedia/imagenes/pointer.png", // url
     scaledSize: new google.maps.Size(30, 30), // scaled size
     origin: new google.maps.Point(0,0), // origin
     anchor: new google.maps.Point(0, 0) // anchor

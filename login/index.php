@@ -42,12 +42,12 @@ if (empty($_SESSION['cUsuario'])){
       <ul class="nav navbar-nav navbar-right">
         <ul class="nav navbar-nav">
         
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opciones <span class="caret"></span></a>
+        <li  class="dropdown">
+          <a href="#"  class="dropdown-toggle" data-toggle="dropdown">Opciones <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Cambiar idioma (inglés)</a></li>
             <li><a href="#">Ayuda</a></li>
-            <li><a href="#animatedModal02" id="imagen_promotor">Se un promotor</a></li>
+            <li><a href="#animatedModal02" id="imagen_promotor" onclick="indexonP();">Se un promotor</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
@@ -92,7 +92,7 @@ if (empty($_SESSION['cUsuario'])){
                                  </form>
                             </div>
                             <div class="bottom text-center">
-                                ¿Eres nuevo aquí? <a href="#animatedModal06" id="registro"><b>Únete con nosotros</b></a>
+                                ¿Eres nuevo aquí? <a href="#animatedModal06" id="registro" onclick="indexonPro();"><b>Únete con nosotros</b></a>
                             </div>
                      </div>
                 </li>
@@ -104,12 +104,12 @@ if (empty($_SESSION['cUsuario'])){
 </nav>
 
 <div id="animatedModal02">
-            <div  id="btn-close-modal" class="close-animatedModal02"> 
+            <div  id="btn-close-modal"  onclick="cancelarP();"  style="background-color:black;"> 
                 <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal"></span></center>
             </div>
                 
-            <div class="modal-content" style="background-color:transparent;border-radius:0px;height:1000px;">
-           <center><label style="margin:2%;font-size:24px;">Vende tus Boletos</label></center>
+            <div class="modal-content02" style="background: rgba(0, 0, 0, 0.8);border-radius:0px;height:1000px;">
+           <center><label style="margin:2%;font-size:24px;color:white;">Vende tus Boletos</label></center>
            
                <?php 
                 include 'vista/plugin/form/archivo.html';
@@ -119,13 +119,13 @@ if (empty($_SESSION['cUsuario'])){
             </div>
         </div>
 
-        <div id="animatedModal06">
-            <div  id="btn-close-modal06" class="close-animatedModal06"> 
-                <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal06"></span></center>
+        <div id="animatedModal06" >
+            <div  id="btn-close-modal06"  onclick="cancelarPro();" style="background-color:black;"> 
+                <center><span style="color:white;font-size:24px;cursor:pointer;" class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal06"></span></center>
             </div>
                 
-            <div class="modal-content" style="background-color:transparent;border-radius:0px;height:1000px;">
-           <center><label style="margin:2%; font-size:24px;">Registrate</label></center>
+            <div class="modal-content" style="background: rgba(0, 0, 0, 0.8);border-radius:0px;height:1000px;">
+           <center><label style="margin:2%; font-size:24px;color:white;">Registrate</label></center>
            
                <?php 
 

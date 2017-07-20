@@ -117,8 +117,32 @@
 }
 
 
+
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	width:100%;
+    width: 100%;
+}
+
+
+.error_form {
+background: url(../../multimedia/imagenes/Error_form.png) no-repeat scroll 98%;
+background-size: 30px;
+}
+
+#iderror_form {
+	background-color:red;width:15%;height:4%;float:left;margin-top:17%;margin-left:10%;border-radius:20px;text-align:center;padding-top:10px;color:white;visibility: hidden;
+}
+
+#iderror_form2 {
+	background-color:red;width:15%;height:4%;float:left;margin-top:22%;margin-left:-15%;border-radius:20px;text-align:center;padding-top:10px;color:white;visibility: hidden;
+}
+
+#iderror_form3 {
+	background-color:red;width:15%;height:4%;float:left;margin-top:26%;margin-left:-15%;border-radius:20px;text-align:center;padding-top:10px;color:white;visibility: hidden;
+}
+
+
+#iderror_form4 {
+	background-color:red;width:15%;height:4%;float:left;margin-top:30%;margin-left:-15%;border-radius:20px;text-align:center;padding-top:10px;color:white;visibility: hidden;
 }
 
 

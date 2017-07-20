@@ -11,7 +11,7 @@
 <!-- multistep form -->
 <form id="msform">
   <!-- progressbar -->
-  <ul id="progressbar" style="margin-left:30%;width:100%;">
+  <ul id="progressbar" style="margin-left:30%;width:100%;text-align:center;">
     <li class="active">Contacto</li>
     <li>Banco</li>
   </ul>
@@ -28,9 +28,17 @@
 
 
 <select class="selectpicker" multiple  style="width:100%;">
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
+  <option>¿Como conociste el evento?</option>
+  <option>Bolante/Flayer</option>
+  <option>Lonas</option>
+    <option>Posters</option>
+  <option>Radio</option>
+  <option>Television</option>
+    <option>Periodico</option>
+  <option>Espectaculares</option>
+  <option>Redes Sociales</option>
+    <option>De boca en boca</option>
+        <option>Otro medio</option>
 </select>
 
 <br>

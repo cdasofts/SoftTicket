@@ -1,26 +1,9 @@
-            $("#imagen4").animatedModal({
-                modalTarget:'animatedModal',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
 
-               $("#imagen5").animatedModal({
-                modalTarget:'animatedModal02',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
 
-                              $("#imagen6").animatedModal({
-                modalTarget:'animatedModal03',
-                animatedIn:'zoomIn',
-                animatedOut:'zoomOut',
-                color:'#3498db',
-                animationDuration:'2s'
-            });
 
 
 
