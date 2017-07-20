@@ -25,12 +25,41 @@ if (isset($_POST['usuario']) and isset($_POST['password'])) {
         if ($comprobar_password) {
             //variable de sesion 
             $_SESSION['cUsuario'] = $nombredeusuario;
-            header('location: ../index.php');
+            header('location: ../index.php?local');
+            //cuando contraseña es incorrecta 
         } else {
-            print 'Los datos han sido incorrectos <br> <a href="./">Volver</a>';
+            //print 'Los datos han sido incorrectos <br> <a href="../index">Volver</a>';
+            ?>
+
+<script type="text/javascript">
+
+setTimeout(function(){  
+
+window.location.href="../index.php?1";
+
+ }, 100);
+
+</script>
+
+<?php
         }
+        // cuando usuario y contraseña son incorrectos 
     } else {
-        print 'Usuario o contraseña incorrectos <br> <a href="./">Volver</a>';
+       // print 'Usuario o contraseña incorrectos <br> <a href="../index">Volver</a>';
+
+?>
+
+<script type="text/javascript">
+
+setTimeout(function(){  
+
+window.location.href="../index.php?0";
+
+ }, 100);
+
+</script>
+
+<?php
     }
 } else {
     //redireccionar a la pagina de inicio 

@@ -9,9 +9,9 @@
 
 					});
 				//add active class on menu
-				$('ul li').click(function(e) {
+				$('#menu').click(function(e) {
 					e.preventDefault();
-					$('li').removeClass('active');
+					$('categorias_cliente').removeClass('active');
 					$(this).addClass('active');
 				});
 			//drop down menu	

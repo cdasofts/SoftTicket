@@ -3,18 +3,6 @@
 <link href="login/style.css" rel="stylesheet">
 
 
-<?php
-//iniciar la variable de sesión 
-session_start();
-//requerir los archivos, se descargan las dependencias instaladas 
-require_once ('vendor/autoload.php');
-
-require_once ('App/Auth/Auth.php');
-
-//solo cuando esté vacía la variable de sesión
-if (empty($_SESSION['cUsuario'])){
-?>
-
 <body>
 
 <nav id="contenedorEncabezado" class="navbar navbar-default navbar-inverse" role="navigation">
@@ -60,38 +48,33 @@ if (empty($_SESSION['cUsuario'])){
             <ul id="login-dp" class="dropdown-menu">
                 <li>
                      <div class="row">
-                     <?php
-                      //llamar funcion estatica de la clase auth
-                     Auth::getUserAuth();?>
+
                             <div class="col-md-12">
                                 Inicia sesión con:
                                 <div class="social-buttons">
                                     <a href="?login=Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                     <a href="?login=Google" class="btn btn-tw"><i class="fa fa-google-plus"></i> Google</a>
                                 </div>
-                                Ingresa tus datos:
+                                -O- ingresa tus datos:
                                  <form action="login/validar.php" method="post" class="form"  role="form" accept-charset="UTF-8" id="login-nav" enctype="application/x-www-form-urlencoded">
                                         <div for="caja1" class="form-group">
                                              <label for="caja1" class="sr-only">Usuario</label>
-                                             <input type="text" id="caja1" name="usuario" class="form-control" placeholder="Usuario" required>
+                                             <input type="text" id="caja1" name="usuario" class="form-control" placeholder="&#128272; Usuario" required>
                                         </div>
 
                                         <div for="caja2" class="form-group">
                                              <label for="caja2" class="sr-only">Contraseña</label>
-                                             <input type="password" id="caja2" name="password" class="form-control" placeholder="Contraseña" required>
+                                             <input type="password" id="caja2" name="password" class="form-control" placeholder="&#128273; Contraseña" required>
                                              <div class="help-block text-right"><a href="">¿Olvidaste tu contraseña?</a></div>
                                         </div>
                                         <div class="form-group">
-                                             <input type="submit" name="prueba"  class="btn btn-primary btn-block">  
+                                             <input type="submit" name="prueba"  class="btn btn-primary btn-block" value="Entrar">  
                                         </div>
-                                        <div class="checkbox">
-                                             <label>
-                                             <input type="checkbox"> Mantente conectado
-                                             </label>
-                                        </div>
+                                        
                                  </form>
                             </div>
                             <div class="bottom text-center">
+
                                 ¿Eres nuevo aquí? <a href="#animatedModal06" id="registro" onclick="indexonPro();"><b>Únete con nosotros</b></a>
                             </div>
                      </div>
@@ -144,14 +127,6 @@ if (empty($_SESSION['cUsuario'])){
         <script type="text/javascript" src="vista/plugin/form_registro/archivo.js"></script>
 
 
-<?php
-
-}else{
-    
-    print 'Hola, que hace '. $_SESSION['cUsuario'].'<br><p><a href="login/cerrar.php">Cerrar sesión</a></p>' ;
- 
-}
-?>
 
 
 

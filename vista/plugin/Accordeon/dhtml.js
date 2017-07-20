@@ -171,6 +171,8 @@ setTimeout(function(){ $("#animatedModal10").css("z-index","-3000"); }, 1000);
 
 })
 
+
+
 }
 
 function cancelarPu() {

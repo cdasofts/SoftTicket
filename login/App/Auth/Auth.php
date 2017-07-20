@@ -46,10 +46,11 @@ class Auth {
         if ($user == null) {
             //si usuario es null se crea nuevo usuario 
             $user = array(
-                'cUsuario' => $socialUser->firstName,
+                'cNombreUsuario' =>$socialUser->firstName,
+                'cAppUsu' =>$socialUser->lastName,
                 'cCorreo' => $socialUser->email
             );
-            $ps = $db->prepare("INSERT INTO cdusuarioscliente (cUsuario,cCorreo) VALUES (:cUsuario, :cCorreo)");
+            $ps = $db->prepare("INSERT INTO cdusuarioscliente (cNombreUsuario,cAppUsu,cCorreo) VALUES (:cNombreUsuario, :cAppUsu, :cCorreo)");
             $ps->execute($user);
             //se recupera el último id que se creó
             $user['eIdUsuarioClie'] = $db->lastInsertId();

@@ -1,6 +1,37 @@
+
+
+  var loc = document.location.href;
+  var getString = loc.split('?')[1];
+ 
+  if (getString == 0){
+swal(
+  'Usuario y contraseña incorrectos',
+  'Revisa tus datos',
+  'error'
+)
+     if (getString == 0){
+       history.pushState(getString, " ", "http://localhost/softicket/trunk/index.php");
+      }
+  
+
+  }else if(getString == 1){
+    swal(
+  'Contraseña incorrecta',
+  'Revisa tus datos',
+  'error'
+)
+    if (getString == 1){
+       history.pushState(getString, " ", "http://localhost/softicket/trunk/index.php");
+      }
+  }else{
+
+  }
+
+
 //Aqui se genera el loader de forma correcta.
 
 $(document).ready(function() {
+
   var counter = 0;
 $("#contenedor_general").show();
 

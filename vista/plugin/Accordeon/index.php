@@ -27,7 +27,7 @@ console.log("Ya dio clic mas de una vez");
     }else {
         $('.digits').countdown({
     format: 'mm:ss',
-    startTime: "00:10",
+    startTime: "10:00",
     image: "vista/plugin/Accordeon/timer/img/digits.png",
     timerEnd: function() { 
      swal({
@@ -216,11 +216,11 @@ src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
                 <center><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" id="spanmodal10" style="color:white;font-size:32px;cursor:pointer" onclick="cancelarC();"></span></center>
             </div>
                 
-            <div class="modal-content10" style="background: rgba(0, 0, 0, 0.8);height:750px;">
+            <div class="modal-content10" style="background: rgba(0, 0, 0, 0.8);height:1000px;">
              
 
 <!-- Estructura del timer para marcar el tiempo de compra -->
-<div class="wrapper" style="height:50%;margin-top:-5%;" >
+<div class="wrapper" style="height:50%;margin-top:-10%;" >
       <div class="cell">
         <div id="holder">
           <div class="digits"></div>
@@ -245,7 +245,7 @@ src="https://www.youtube.com/embed/RjWNCLvyGHY?ecver=1">
 </center>
 
 
-  <div id="pago_boleto"  style="display:none;width:50%;">
+  <div id="pago_boleto"  style="display:none;width:50%;margin-top: -10%;">
 
 
 <?php
@@ -261,10 +261,10 @@ include 'vista/plugin/forms_pago/form_pago1/archivo.php';
 
 <div id="divconfirmacion" style="display:none;float:right;margin-top:-30%;margin-right:10%;" align="right">
 
-<label style="float:right;margin-top:35%;" >Confirmar la compra</label>
+<label style="float:right;margin-top:35%;color: white;" >Confirmar la compra</label>
 
 <span style="float:right;width:20%;height:45%;margin-top:40%;margin-right:-15%;border-width: 20px;
-    border-color: red;">
+    border-color: red;color: white;">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula felis leo, et posuere dolor vulputate ac. Sed vestibulum lectus vel tempus bibendum. Proin et magna tempor, condimentum elit in, consectetur mi. Morbi eu massa viverra, euismod augue ac, consectetur risus. Praesent eget facilisis nunc. Aenean ut ornare magna. Nullam venenatis vulputate nisl, eu rutrum justo hendrerit eu.
 </span>
   <button class="btn btn-success" id="btncomprarB" style="float:right;margin-top:64%;margin-right:-10%;" onclick="comprar();">
